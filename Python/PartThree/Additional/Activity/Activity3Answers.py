@@ -463,6 +463,16 @@ while num <= 50:
         break
     num += 1
 
+# Write a Python program that uses a while loop and the pass statement to find and print the first odd number between 1 and 20. If the number is even, use the pass statement to skip it without taking any action.
+num = 1
+while num <= 20:
+    if num % 2 != 0:  # Check if the number is odd
+        print(f"The first odd number is: {num}")
+        break
+    else:
+        pass  # Skip even numbers without taking any action
+    num += 1
+
 # Use the else clause with a for loop to check if a given number is prime.
 num = 17
 for i in range(2, num):
@@ -472,6 +482,8 @@ for i in range(2, num):
 else:
     print(f"{num} is a prime number.")
 #! If and Loop
+
+
 """
 Combining If and For Loop
 Question: Write a program that prints all the odd numbers between 1 and 20. However, for numbers divisible by 3, print "Divisible by 3" instead of the number itself.

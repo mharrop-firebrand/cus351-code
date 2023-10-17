@@ -63,26 +63,10 @@ Output: It's a palindrome!
 
 #! For Loop:
 # Write a for loop to print the numbers from 1 to 5.
-# numbers = [1, 2, 3, 4, 5]
-# for num in numbers:
-#     print(num)
-
-# for num in range(1, 6):
-#     print(num)
 
 # Create a list of fruits (e.g., ["apple", "banana", "orange"]). Use a for loop to print each fruit in the list.
 
 # Write a for loop to calculate the sum of numbers from 1 to 10.
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-total = 0
-for num in numbers:
-    total += num
-print(total)
-
-total = 0
-for num in range(1, 11):
-    total +=num
-print(total)
 
 """
 For Loop
@@ -162,6 +146,8 @@ Write a program to generate and print the Fibonacci sequence up to a specified l
 # Use a for loop and the continue statement to print all numbers from 1 to 10 except for the number 5.
 
 # Use a while loop and the break statement to find the first multiple of 7 between 1 and 50.
+
+# Write a Python program that uses a while loop and the pass statement to find and print the first odd number between 1 and 20. If the number is even, use the pass statement to skip it without taking any action.
 
 # Use the else clause with a for loop to check if a given number is prime.
 

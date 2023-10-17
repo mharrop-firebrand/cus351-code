@@ -114,7 +114,7 @@ if raining:
 age = 17
 is_student = False
 has_job = True
-
+# one has to be true AND # has to be false AND #had to be true
 if (age < 18 or age > 65) and not is_student and has_job:
     print("You are eligable for a discount")
 else:
