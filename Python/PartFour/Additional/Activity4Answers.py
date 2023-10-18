@@ -1,7 +1,5 @@
 """1) 
 Write a program to create a function that takes two arguments, name and age, and print their value."""
-
-
 def print_name_and_age(name, age):
     print("Name:", name)
     print("Age:", age)
@@ -257,6 +255,26 @@ def days_until_christmas():
 result = days_until_christmas()
 print("Days until Christmas:", result)
 
+#! Built-in Modules:
+# Import the random module and generate a random number between 1 and 10.
+import random
+
+random_number = random.randint(1, 10)
+print(random_number)
+
+# Import the datetime module and print the current date and time.
+import datetime
+
+current_datetime = datetime.datetime.now()
+print(current_datetime)
+
+# Import the math module and calculate the square root of a given number.
+import math
+
+number = 25
+square_root = math.sqrt(number)
+print(square_root)
+
 #! Custom Modules:
 """ 1)
 Create a custom module named calculator that contains functions for basic arithmetic operations (addition, subtraction, multiplication, division)."""
@@ -435,3 +453,33 @@ except KeyError:
     print(f"Error: Key '{user_key}' not found in the dictionary.")
 except Exception as e:
     print("An unexpected error occurred:", e)
+
+''' Implement a recursive function to check if a given string is a palindrome.
+
+Ensure your function handles the base case appropriately (e.g., an empty string or a string with one character is considered a palindrome).
+Test your function with different strings to verify its correctness.
+Consider using a suitable base case to terminate the recursion.
+Think about how the recursive calls will lead to the final result.
+'''
+
+def is_palindrome(s):
+    # Base case: If the string has 0 or 1 characters, it's a palindrome
+    if len(s) <= 1:
+        return True
+    
+    # Recursive case: Check if the first and last characters are the same
+    if s[0] == s[-1]:
+        # Recur on the substring without the first and last characters
+        return is_palindrome(s[1:-1])
+    else:
+        return False
+
+# Example Usage
+word1 = "level"
+word2 = "python"
+
+result1 = is_palindrome(word1)
+result2 = is_palindrome(word2)
+
+print(f"Is '{word1}' a palindrome? {result1}")
+print(f"Is '{word2}' a palindrome? {result2}")

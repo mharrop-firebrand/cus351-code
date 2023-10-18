@@ -3,11 +3,14 @@
 """1) 
 Write a program to create a function that takes two arguments, name and age, and print their value."""
 
+
+
+
 """2) 
 Write a function that takes 2 numbers as parameters and returns the highest of the 2 numbers."""
 
 """3) 
-Write a function that takes kilometers as a parameter, converts it into miles and returns the result. (Hint: Google the conversion arthimetic for km to miles)"""
+Write a function that takes kilometers as a parameter, converts it into miles and returns the result. (Hint: Google the conversion arithmetic for km to miles)"""
 
 """4) 
 Write a function that takes a list of numbers as input and returns the sum of all the even numbers in the list. (Hint: Modulus)"""
@@ -51,23 +54,10 @@ Write a function that calculates how many days it is until Christmas and returns
 
 #! Built-in Modules:
 # Import the random module and generate a random number between 1 and 10.
-import random
-
-random_number = random.randint(1, 10)
-print(random_number)
 
 # Import the datetime module and print the current date and time.
-import datetime
-
-current_datetime = datetime.datetime.now()
-print(current_datetime)
 
 # Import the math module and calculate the square root of a given number.
-import math
-
-number = 25
-square_root = math.sqrt(number)
-print(square_root)
 
 #! Custom Modules:
 """ 1)
