@@ -1,0 +1,75 @@
+/* We have now entered into CSS teritory THIS is no longer HTML */
+/* This is a comment - looks like a multi-line javascript comment */
+/* 0 - (2^8 - 1) = 0-255  8 bits per colour */
+/* (RED, GREEN, BLUE) */
+body {
+    background-color: rgb(0, 0, 0); /* background-color changes the page colour */
+    color: white;
+    margin: 2%;
+}
+
+h1 { 
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
+p{ /* selector - what we apply the CSS to */
+    color:rgb(255, 200, 200);
+}
+ol, li, a {
+    /* text-align: center;
+    list-style-position: inside;*/
+    color:rgb(255, 255, 255);
+}
+
+img {
+     padding: 1.5%;
+     border: 5px solid white;   
+     margin: 0.5%;     
+}
+
+/* This one's for the saxophone player picture - I want this one on the RIGHT */
+#sax {
+    float: right;
+    margin-left: 2%;
+}
+
+/* This one's for the band picture - I want this one on the LEFT */
+#band {
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}
+
+/* # means 'id' used for exaclty ONE tag*/
+#h1AboutYou{
+    color: rgb(255, 255, 255); 
+    text-align: center;
+}
+#amabout {
+    color: rgb(191, 233, 107); 
+}
+
+/* . means 'class' used of a group of tags */
+.largeListItem {
+    font-size: 1.5em;
+}
+
+#lastLi {
+    font-size: 2.5px;
+}
+
+#saxDiv {
+    background-color:rgb(100, 0, 0);
+    padding: 1.5%;
+}
+
+
+
+#bandDiv {
+    background-color:rgb(0, 0, 100);
+    padding: 1.5%;
+}
+
+

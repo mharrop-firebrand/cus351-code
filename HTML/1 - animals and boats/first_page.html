@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello!</title>
+    <meta name="description" content="Animals speak latin."/>
+    <meta name="author" content="George Kontos" />
+    <meta name="keywords" content="Lorem Ipsum animals africa" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <!-- Cascading Style Sheets -->
+    <!-- This will take precedence over 'style.css' file ie if they are adapting the same property THIS is the one that will take effect -->
+    <style type="text/css">     /* Cascading Style Sheets  */        
+        /* Internal */
+        p {
+          color: rgb(208, 175, 209);    /*  this is an rgb color there are three integer values 0-255  */
+          background-color: rgb(61, 4, 59);
+        }
+
+      /* the '.' character is to signify that the following rules are for an 'class' of purpleHeading */
+      .purpleHeading {
+          color:rgb(171, 51, 153);
+      }
+
+      
+    </style>
+
+  </head>
+  <body>
+
+    <a href="first_page.html">First Page</a>
+    <a href="second_page.html">Second Page</a>
+
+    <!-- These tag opens and closes BEFORE other tags open  -->
+    <h1>Lorem Ipsum Text</h1> 
+    <h2>Lorem Ipsum 1</h2>
+
+
+    <!-- look at the css rule for #redParagraph -->
+    <p id="redParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+    <p>
+      <a href="https://www.lipsum.com/">
+        <img src="featured_art_hyena_istock.jpg" width="500" height="300">
+      </a>
+    </p>
+    <p id="yellowParagraph"><a target="blank" href="https://www.lipsum.com/" >This what lorem ipsum is</a></p>
+
+    <h3>Lorem Ipsum 1.5</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+    <img src="https://media.istockphoto.com/id/479667835/photo/background-elephant.jpg?s=612x612&w=0&k=20&c=DwfinIerTq104FXWcBBwegTWcmw8tf18EGqa5IpEyFk="><!-- there's no closing tag for img -->
+
+    <img src="istockphoto-497537400-612x612.jpg">
+
+
+    <h2>Lorem Ipsum 2</h2>
+    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    <h2>Lorem Ipsum 3</h2>
+    <pLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+    <!-- Inline CSS - the MOST specific-->
+    <!-- AVOID THIS -->
+    <!-- instead use an id-->  
+    <h2 style="color:blue;">H2 with inline CSS</h2>
+
+    <!-- use this id to apply a particular CSS rule --> 
+    <!-- you can have only ONE html element with a particular id --> 
+    <h2 id="blueHeading">H2 with ID</h2>
+
+    <!-- YOU SHOULDN'T use the SAME ID twice-->
+    <h2 id="blueHeading">another H2 with ID</h2>
+
+
+    <!-- you can have many html elements with a particular class --> 
+    <h2 class="purpleHeading">another H2 with CLASS</h2>
+    <h2 class="purpleHeading">yet another H2 with CLASS</h2>
+
+    <!--  The li tags are INSIDE the ul tag  -->
+    <!-- ul stands for Unordered List and li is List Item-->
+    <!-- ol is a Oredered List -->
+    <ul>
+        <li class="purpleHeading">bread</li>
+        <li>bananas</li>
+        <li>anchovies</li>
+    </ul>
+
+    <ol>
+        <li>bread</li>
+        <li>bananas</li>
+        <li>anchovies</li>
+    </ol>
+
+  </body>
+</html>

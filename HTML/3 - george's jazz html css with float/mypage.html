@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!-- HTML stands for Hypertext Markup Language - it tells us WHAT (content) to show on our web pages -->
+<html lang="en">
+
+<!-- There should be only one head, over the body -->
+<head>
+    <!-- metadata means data about the data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George's Jazz page</title>
+
+    <!-- CSS stands for cascading style sheets - it tells us HOW (styling)) to show on our web pages -->
+    <!-- this point to EXTERNAL CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- There should be only one body, under the head  -->
+<body>   <!-- This is a 'body' tag that OPENS the body section> -->
+
+    <!-- this is INLINE CSS, it has precedence over INTERNAL and EXTERNAL CSS -->
+    <!-- this CSS rule will remain inside this h1 - it won't be applied anywhere else -->
+    <!-- looks horible - don't use-->
+    <!-- style="color: rgb(255, 255, 255); text-align: center;"-->
+    <h1>Jazz</h1>
+    
+    <h2>Here are some jazz musicians</h2>
+    <ul><!-- unordered list OPENING tag  -->
+        <li>Dizzy Gillespie</li>
+        <li>Miles Davies</li>
+        <li>Ella Fitzgerald</li>
+        <li>Cassandra Wilson</li>
+    </ul><!-- unordered list CLOSING tag  -->
+
+
+    <!-- This here is a (hyper)link  -->
+    <!-- A link has attributes: are like variables but their name is pre-set, all are STRINGS -->
+
+    <div id="saxDiv">
+        <a href="https://en.wikipedia.org/wiki/Jazz">
+            <!-- This here is an image  -->
+            <!-- Image does NOT take a closing tag-->
+            <!-- Image has attributes: are like variables but their name is pre-set, all are STRINGS -->
+            <img id="sax" src="https://cdn-images.audioaddict.com/1/b/e/b/e/8/1bebe8759e23ab6a1b92e1d46e2e7f12.png" width="300" height="300">            
+        </a>
+        <p>Jazz is a music genre that originated in the African-American communities of New Orleans, Louisiana, in the late 19th and early 20th centuries, with its roots in blues and ragtime. Since the 1920s Jazz Age, it has been recognized as a major form of musical expression in traditional and popular music. Jazz is characterized by swing and blue notes, complex chords, call and response vocals, polyrhythms and improvisation. Jazz has roots in European harmony and African rhythmic rituals.</p>
+    </div>
+
+    <div id="bandDiv">
+        <img id="band" src="https://www.udiscovermusic.com/wp-content/uploads/2020/12/Jazz-New-Thing-Featured-Art-1000x600.jpg" width="300" height="200">  
+        <p>As jazz spread around the world, it drew on national, regional, and local musical cultures, which gave rise to different styles. New Orleans jazz began in the early 1910s, combining earlier brass band marches, French quadrilles, biguine, ragtime and blues with collective polyphonic improvisation. But jazz did not begin as a single musical tradition in New Orleans or elsewhere. In the 1930s, arranged dance-oriented swing big bands, Kansas City jazz (a hard-swinging, bluesy, improvisational style), and gypsy jazz (a style that emphasized musette waltzes) were the prominent styles. Bebop emerged in the 1940s, shifting jazz from danceable popular music toward a more challenging "musician's music" which was played at faster tempos and used m</p>
+    </div>
+
+</body>  <!-- This is a '/body' tag that CLOSES the body section> -->
+
+</html>

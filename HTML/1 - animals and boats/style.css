@@ -1,0 +1,48 @@
+/* External CSS - is the LEAST specific*/
+body {
+    background-color: rgb(179, 131, 138);
+}
+
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;              
+}
+
+ul {
+    color: rgb(61, 37, 4);   /*  this is an rgb color there are three integer values 0-255  */
+    background-color: rgb(175, 206, 209);
+}
+
+p {
+    color: rgb(61, 4, 59);   /*  this is an rgb color there are three integer values 0-255  */
+    background-color: rgb(208, 175, 209);
+}
+
+img {
+    /* box model  */
+    padding: 10px;
+    border: 10px solid black;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    float: right;
+}
+
+/* we use #id_name to refer to a particular html element with id="id_name" */
+#redParagraph {
+    background-color: rgb(228, 21, 21);
+}
+
+#yellowParagraph{
+    background-color: rgb(238, 226, 0);
+}
+
+
+/* the '#' character is to signify that the following rules are for an 'id' of blueHeading */
+#blueHeading {
+    border: 10px solid grey;
+    color:yellow;
+}
+
+/* the '.' character is to signify that the following rules are for an 'class' of purpleHeading */
+.purpleHeading {
+    color:purple;
+}
