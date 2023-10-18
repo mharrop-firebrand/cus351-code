@@ -1,0 +1,134 @@
+Each line in a table is called a RECORD
+A table called Employees SHOULD represent 1 employee for each RECORD or line
+All our table name are in plural
+* everything in a record / everything from left to right
+The attributes of the table are called columns
+You can select particular column names by putting them after the SELECT
+	SELECT * FROM Customers WHERE Country="Mexico";
+
+
+Exercises 1:
+---------------
+Select the Description from Categories for CategoryName is equal to Dairy Products
+Select the date of birth for and Employee called Robert
+Select all the products where the price is over 30
+
+SQL Keywords or commands should be in CAPITAL and we'll see them in BLUE
+table names, and column names should be on the same case as you can see them in 
+
+You can use all the boolean expressions you use in an 'if' statement in programming after a WHERE in SQL eg
+SELECT * FROM Customers WHERE CustomerID <= 6
+SELECT * FROM Customers WHERE CustomerID != 6
+
+ORDER BY [column name] will order my results by a particular column
+SELECT CustomerName, Address FROM Customers WHERE Country="Mexico" ORDER BY Address; 
+
+Show all Customers with and ID between 10 and 20 inclusive
+SELECT * FROM [Customers] WHERE CustomerID > 10 AND CustomerID <= 20
+SELECT * FROM [Customers] WHERE CustomerID BETWEEN 11 AND 20;
+
+If you want to have different columns in your WHERE you should use AND
+SELECT * FROM [Customers] WHERE CustomerID > 10 AND Country= "Mexico"
+
+
+-- SELECT * FROM Customers WHERE CustomerID > 15 AND CustomerID <= 45 
+-- SELECT * FROM Customers WHERE CustomerID BETWEEN 15 AND 45 
+-- SELECT * FROM Customers WHERE CustomerID > 15 AND CustomerID <= 45 
+-- SELECT * FROM Employees WHERE LastName = "Davolio" OR LastName = "Fuller" 
+
+
+Dates:
+--------
+SELECT * FROM Employees WHERE BirthDate >= '1950-01-01' AND BirthDate < '1960-01-01' ORDER BY BirthDate;
+
+SELECT * FROM Employees 
+WHERE BirthDate >= '1950-01-01' AND BirthDate < '1960-01-01' 
+ORDER BY BirthDate;
+
+SELECT 
+	* 
+FROM 
+	Employees 
+WHERE 
+	BirthDate >= '1950-01-01' 
+AND 
+	BirthDate < '1960-01-01' 
+ORDER BY 
+	BirthDate;
+
+
+LIKE:
+-------
+
+SELECT * FROM Employees WHERE LastName LIKE "%li%"
+-- LastName = "li" -- WILL NOT WORK
+-- LastName LIKE "%li%"
+
+-- SELECT * FROM Employees WHERE BirthDate LIKE "%68%"
+
+SELECT * FROM Employees  WHERE Notes LIKE "%e."  -- an% means pick up a string that STARTS with 'an' but may have trailing letters
+
+SELECT * FROM Employees WHERE Notes LIKE "% a % in %"
+
+
+Exercises 1:
+---------------
+On the customers table
+
+Find all 
+	addresses with an 8 in them 
+	addresses with ',' 
+	customers with "and" in the name
+	PostalCodes that start with 6
+
+Find all 
+	addresses with ',' and CustomerID from 10 to 60 
+	customers with "a" in the name that are from Mexico
+	all customers from Spain with an ID >20
+
+
+BOOLEAN LOGIC - NOT LLOYDS
+-----------------------------------------
+SELECT * FROM Employees WHERE BirthDate >= '1960-01-01' AND BirthDate <= '1970-01-01'
+-- exactly the opossite, take the whole boolean expression: BirthDate >= '1960-01-01' AND BirthDate <= '1970-01-01'
+-- put paranthesis (brackets) () around it and a NOT right before it:
+SELECT * FROM Employees WHERE NOT (BirthDate >= '1960-01-01' AND BirthDate <= '1970-01-01')
+
+SELECT EmployeeID FROM Employees WHERE Notes NOT LIKE "% a % in % was %"
+
+SELECT * FROM Employees WHERE BirthDate NOT BETWEEN '1960-01-01' AND '1970-01-01'
+
+-- this
+SELECT * FROM Employees WHERE NOT BirthDate >= '1960-01-01' AND BirthDate <= '1970-01-01'
+-- is not the same expression
+
+BirthDate >= '1960-01-01'
+-- NOT(A) AND B   is equivalent to    NOT A AND B  			--- this means do the NOT procedure first and THEN do the AND
+-- NOT (A AND B) 											--- this means do the AND first and THEN do the NOT
+
+A   		B		NOT(A) AND B		NOT (A AND B) 
+FALSE		FALSE		FALSE			TRUE
+TRUE		FALSE		FALSE			TRUE
+FALSE		TRUE		TRUE			TRUE
+TRUE		TRUE		FALSE			FALSE
+
+NOT(A) AND B   is the same as this: NOT A AND B
+
+DISTINCT:
+-- DISTINCT gives me each result once
+-- SELECT DISTINCT OrderID FROM OrderDetails;
+-- SELECT MIN(OrderID) FROM OrderDetails;
+
+
+SQL FUNCTIONS:  -  always used with brackets and they all return a single value back to you 
+-----------------------
+
+MIN()/MAX():
+-- MIN/MAX will return 1 value, the minimum or maximum value
+SELECT MIN(Price) FROM Products;
+SELECT MAX(Price) FROM Products;
+
+-- SELECT SUM(Price) FROM Products WHERE ProductID <= 5;  -- 69.00
+-- SELECT AVG(Price) FROM Products WHERE ProductID <= 4;  -- 17.250000
+-- SELECT COUNT(ProductID) FROM Products;
+-- SELECT * FROM Products;
