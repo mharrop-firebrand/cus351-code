@@ -4,25 +4,139 @@
 Write a program to create a function that takes two arguments, name and age, and print their value."""
 
 
+def print_name_and_age(name, age):
+    print("Name:", name)
+    print("Age:", age)
 
 
+# Function Call
+# print_name_and_age("John", 25)
 """2) 
 Write a function that takes 2 numbers as parameters and returns the highest of the 2 numbers."""
+
+
+def find_highest_number_alternative(num1, num2):
+    if num1 > num2:
+        return num1
+    else:
+        return num2
+
+
+# Function Call
+# result_alt = find_highest_number_alternative(10, 5)
+# print("Highest number (alternative):", result_alt)
+
+
+# or
+def find_highest_number(num1, num2):
+    return max(num1, num2)
+
+
+# Function Call
+# result = find_highest_number(10, 5)
+# print("Highest number:", result)
 
 """3) 
 Write a function that takes kilometers as a parameter, converts it into miles and returns the result. (Hint: Google the conversion arithmetic for km to miles)"""
 
+# mile = km * 0.62137
+
+
+def convert_km_to_miles(km):
+    mile = km * 0.62137
+    return mile
+
+
+# print(f'10km to miles is: ', convert_km_to_miles(10))
+
+# print(f'21km for half marathon in miles is: ', convert_km_to_miles(21))
+
+# print(f'42km for full marathon in miles is: ', convert_km_to_miles(42))
+
 """4) 
 Write a function that takes a list of numbers as input and returns the sum of all the even numbers in the list. (Hint: Modulus)"""
+
+
+def sum_of_even_nums(ls):
+    total = 0
+    for i in ls:
+        if i % 2 == 0:
+            total += i
+    return total
+
+
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# print(sum_of_even_nums(list1))
+
+# print(sum_of_even_nums([42, 43, 44, 109, 108, 202]))
 
 """5) 
 Create a function that takes a string as input and returns the string reversed. (Hint: How did we revese lists? Slicing)"""
 
+# string1 = 'test'
+
+# print(string1[::-1])
+
+
+def reverse_string(x):
+    return x[::-1]
+
+
+# print(reverse_string("The meaning of life is 42"))
+# print(reverse_string("firebrand"))
+
+
+# or
+def reverse_string2():
+    string_input = input("Enter a string: ")
+    reversed = string_input[::-1]
+    rereversed = reversed[::-1]
+    return reversed, rereversed
+
+
+# print(reverse_string2())
+
 """6) 
 Create function that can accept two variables and calculate addition and division. Also, it must return both addition and division in a single return call."""
+x = 5
+y = 1
+add = x + y
+# print(add)
+
+x = 8
+y = 2
+division = x / y
+# print(division)
+
+
+def add_divide(num1, num2):
+    add, division = num1 + num2, num1 / num2
+    num1, num2, num3 = 0, 0, 0
+    num1 = num2 = num2 = 0
+    return add, division
+
+
+# print(add_divide(8, 2))
+# print(add_divide(100, 6))
+# print(add_divide(42, 3))
+
 
 """7) 
 Create a function that checks to see if a given string is a palindrome or not. (Hint: The same backwards as forwards)"""
+
+def palindome(string2):
+    if string2.lower() == string2[::-1].lower():
+        print(string2, 'is a palindome (same backwards as forwards)')
+    else: 
+        print(string2, 'not a palindome')
+
+# palindome('hannaH')
+
+def palindrome(input_string):
+    return input_string == input_string[::-1]
+
+print(palindrome('hannah'))
 
 """ 8)
 Create a function that will show information about an employee. It should accept the employee's name and salary and display both.
