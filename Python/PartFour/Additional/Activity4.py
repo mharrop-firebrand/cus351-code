@@ -125,34 +125,84 @@ def add_divide(num1, num2):
 """7) 
 Create a function that checks to see if a given string is a palindrome or not. (Hint: The same backwards as forwards)"""
 
+
 def palindome(string2):
     if string2.lower() == string2[::-1].lower():
-        print(string2, 'is a palindome (same backwards as forwards)')
-    else: 
-        print(string2, 'not a palindome')
+        print(string2, "is a palindome (same backwards as forwards)")
+    else:
+        print(string2, "not a palindome")
+
 
 # palindome('hannaH')
+
 
 def palindrome(input_string):
     return input_string == input_string[::-1]
 
-print(palindrome('hannah'))
+
+# print(palindrome('hannah'))
 
 """ 8)
 Create a function that will show information about an employee. It should accept the employee's name and salary and display both.
 If the salary is missing then assign default value 9000 to salary"""
+
+
+def employee_information(name, salary=9000):
+    return name, salary
+
+
+# print(employee_information("Maddy", 9000))
+# print(employee_information("Tom", 10000))
+# print(employee_information("Fred"))
+
 
 #! Advance
 
 """ 9)
 Implement a Temperature Converter
 Write a function celsius_to_fahrenheit that converts Celsius to Fahrenheit. Include exception handling to ensure the input is a valid number.
-Example: celsius_to_fahrenheit(25) should return approximately 77"""
+Example: celsius_to_fahrenheit(25) should return approximately 77
+
+Parameter: int(celcium)
+Do: Convert celcium to farenheit:
+    (celcium * 1.8) + 32 = farenheit
+Return: number(farenheit)
+"""
+import math
+
+
+def convert_temp(celcius):
+    farenheit = math.floor((celcius * 1.8) + 32)
+    return farenheit
+
+
+# print(f"28 degrees C in farenheit is {convert_temp(28)}")
+# print(f"145 degrees C in farenheit is {convert_temp(145)}")
 
 """ 10)
 Build a List Reverser Function
-Develop a function reverse_list that takes a list as input and returns its reverse. Include exception handling to check if the input is a valid list.
+Develop a function reverse_list that takes a list as input and returns its reverse.
 Example: reverse_list([1, 2, 3, 4]) should return [4, 3, 2, 1]."""
+
+list10 = [1, 2, 3, 4]
+
+print(list10[::-1])
+
+
+def reverse_list2(my_list):
+    return my_list[::-1]
+
+
+input_l = input("Enter a list: ")
+list_input = []
+
+for item in input_l.split():
+    list_input.append(int(item))
+
+print(reverse_list2(list_input))
+
+print(reverse_list2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
 
 """ 11)
 Create a Grade Calculator

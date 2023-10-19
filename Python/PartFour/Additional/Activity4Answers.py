@@ -173,6 +173,32 @@ def reverse_list(input_list):
 result = reverse_list([1, 2, 3, 4])
 print("Reversed list:", result)
 
+
+
+def reverse_list(input_list):
+    try:
+        if not isinstance(input_list, list):
+            raise ValueError("Input is not a valid list")
+        
+        return list(reversed(input_list))
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
+my_input = input("Enter a list of elements separated by spaces: ")
+
+try:
+    user_list = [int(item) for item in my_input.split()]
+except ValueError:
+    print("Error: Please enter a valid list of integers.")
+    user_list = []
+
+
+result = reverse_list(user_list)
+print("Original List:", user_list)
+print("Reversed List:", result)
+
+
 """ 11)
 Create a Grade Calculator
 Write a function calculate_grade that takes a student's score as input and returns their grade (A, B, C, D, or F). Include exception handling to ensure the input is within a valid score range."""
