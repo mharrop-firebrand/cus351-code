@@ -20,20 +20,58 @@
 #   ...
 
 #! NameError
+# print(name)
 
 #! Handling NameError
+try:
+    print(name)
+except NameError as e:
+    print("Error:", e)
+
+print("Hi")
 
 
 #! ZeroDivisionError
 # OUR PROGRAM WILL BREAK AND NOT CONTINUE SO WE NEED TO HANDLE IT
+num1 = int(input("Please enter a number: "))
+num2 = int(input("Please enter another number: "))
+result = num1 / num2
+print(result)
 
 #! Handling ZeroDivisionError
+try:
+    num1 = int(input("Please enter a number: "))
+    num2 = int(input("Please enter another number: "))
+    result = num1 / num2
+    print(result)
+except ZeroDivisionError:
+    print("ERROR: CANNOT DIVIDE BY ZERO")
+except ValueError:
+    print("VALUE ERROR: DID NOT ENTER A NUMBER")
 
 #! Handling ValueError
-
+try:
+    age = int(input("Please enter your age: "))
+    print("Your age is: ", age)
+except ValueError:
+    print("Error: invalid input. Did not enter a valid integer")
 # Multiple Exceptions
+except:
+    print("Something went wrong")
+
 
 #! Inside a function
+def add_numbers():
+    try:
+        num1 = int(input("Please enter a number: "))
+        num2 = int(input("Please enter another number: "))
+        result = num1 + num2
+        print(result)
+    except ValueError:
+        print("ERROR: invalid integers for addition")
+
+
+add_numbers()
 
 #! Else
 
@@ -48,8 +86,17 @@
 #   always run
 
 # Try Else
-
+try:
+    age = int(input("Please enter your age: "))
+    print(age)
+except ValueError:
+    print("That was not an integer, valueError")
+else:
+    print("No exception thrown, correct value")
 # Finally
+finally:
+    print("This function was run, bye")
+
 
 #! Raise
 # raise [ExceptionType([message])]

@@ -186,22 +186,22 @@ Example: reverse_list([1, 2, 3, 4]) should return [4, 3, 2, 1]."""
 
 list10 = [1, 2, 3, 4]
 
-print(list10[::-1])
+# print(list10[::-1])
 
 
 def reverse_list2(my_list):
     return my_list[::-1]
 
 
-input_l = input("Enter a list: ")
-list_input = []
+# # input_l = input("Enter a list: ")
+# list_input = []
 
-for item in input_l.split():
-    list_input.append(int(item))
+# for item in input_l.split():
+#     list_input.append(int(item))
 
-print(reverse_list2(list_input))
+# print(reverse_list2(list_input))
 
-print(reverse_list2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+# print(reverse_list2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
 
 """ 11)
@@ -259,21 +259,44 @@ def find_highest_number(num1, num2):
 print("Highest number:", find_highest_number(10, 5))
 print("Highest number:", find_highest_number(10, 'Hi'))
 """
+# def find_highest_number(num1, num2):
+#     try:
+#         if num1 > num2:
+#             return num1
+#         else:
+#             return num2
+#     except TypeError:
+#         return 'Did not enter a number: TypeError'
+
+
+# # Function Call
+# print("Highest number:", find_highest_number(10, 5))
+# print("Highest number:", find_highest_number(10, "Hi"))
+
 
 """2) 
 Use your addition and division function to add exception handling for a Zero division error (additional add user input and value error and type error.)
 
-def calculate_addition_and_division(a, b):
-    addition = a + b
-    division = a / b
-    return addition, division
+"""
+def calculate_addition_and_division():
+    try: 
+        a = int(input('Enter a number: '))
+        b = int(input('Enter a number: '))
+        try:
+            division = a / b
+        except ZeroDivisionError:
+            return 'ZERODIVISIONERROR. Cannot divide by zero'   
+    except ValueError:
+        return 'ValueError: Not an integer'
+    else:
+        addition = a + b
+        return addition, division
 
 
 # Function Call
-result_add, result_sub = calculate_addition_and_division(10, 2)
-print("Addition:", result_add)
-print("Division:", result_sub)
-"""
+print(calculate_addition_and_division())
+
+
 
 """3)
 Create a dictionary and ask the user to enter a key.
