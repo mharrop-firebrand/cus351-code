@@ -1,8 +1,8 @@
 # Syntax Error Example
-print('Hello World')
+print("Hello World")
 x = 2
 if x > 5:
-    print('x is greater than 5')
+    print("x is greater than 5")
 
 # Type Error Example
 num = 10
@@ -16,33 +16,42 @@ print(result)
 variable = 5
 print(variable)
 
+
 def print_greeting(Message):
     print(Message)
 
-hi = 'Hi'
-print_greeting('hi')
+
+hi = "Hi"
+print_greeting("hi")
 
 
 # Logic Error Example
-'''
+"""
 this function should return an int. With pi * r squared
-'''
+"""
+
+
 def calculate_area(radius):
     return (3.14 * radius) ** 2
+
 
 result = calculate_area(5)
 print(result)
 
+
 def print_numbers():
     for i in range(6):
-        print('hi')
+        print("hi")
     print(i)
 
+
 print_numbers()
+
 
 # Runtime Error Example
 def division(x, y):
     return x / y
+
 
 result = division(10, 2)
 print(result)

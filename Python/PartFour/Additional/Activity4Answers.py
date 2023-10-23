@@ -1,5 +1,7 @@
 """1) 
 Write a program to create a function that takes two arguments, name and age, and print their value."""
+
+
 def print_name_and_age(name, age):
     print("Name:", name)
     print("Age:", age)
@@ -174,16 +176,16 @@ result = reverse_list([1, 2, 3, 4])
 print("Reversed list:", result)
 
 
-
 def reverse_list(input_list):
     try:
         if not isinstance(input_list, list):
             raise ValueError("Input is not a valid list")
-        
+
         return list(reversed(input_list))
     except Exception as e:
         print(f"Error: {e}")
         return None
+
 
 my_input = input("Enter a list of elements separated by spaces: ")
 
@@ -480,25 +482,27 @@ except KeyError:
 except Exception as e:
     print("An unexpected error occurred:", e)
 
-''' Implement a recursive function to check if a given string is a palindrome.
+""" 4) Implement a recursive function to check if a given string is a palindrome.
 
 Ensure your function handles the base case appropriately (e.g., an empty string or a string with one character is considered a palindrome).
 Test your function with different strings to verify its correctness.
 Consider using a suitable base case to terminate the recursion.
 Think about how the recursive calls will lead to the final result.
-'''
+"""
+
 
 def is_palindrome(s):
     # Base case: If the string has 0 or 1 characters, it's a palindrome
     if len(s) <= 1:
         return True
-    
+
     # Recursive case: Check if the first and last characters are the same
     if s[0] == s[-1]:
         # Recur on the substring without the first and last characters
         return is_palindrome(s[1:-1])
     else:
         return False
+
 
 # Example Usage
 word1 = "level"
