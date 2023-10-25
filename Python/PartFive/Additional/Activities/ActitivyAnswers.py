@@ -39,3 +39,59 @@
 
 #! Extra:
 # Look in to reading other file types, like csv or binary
+
+"""
+Define a class named Rectangle which can be constructed by a length and width. The Rectangle class has a method which can compute the area.
+Hints: Use def methodName(self) to define a method."""
+
+
+class Rectangle(object):
+    def __init__(self, l, w):
+        self.length = l
+        self.width = w
+
+    def area(self):
+        return self.length * self.width
+
+
+Rectangle = Rectangle(2, 10)
+print(Rectangle.area())
+
+"""Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as argument. Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.
+Hints: To override a method in super class, we can define a method with the same name in the super class."""
+
+
+class Rectangle(object):
+    def __init__(self, l, w):
+        self.length = l
+        self.width = w
+
+    def area(self):
+        return self.length * self.width
+
+
+Rectangle = Rectangle(2, 10)
+print(Rectangle.area())
+"""Define a class Person and its two child classes: Male and Female. All classes have a method "getGender" which can print "Male" for Male class and "Female" for Female class.
+Hints: Use Subclass(Parentclass) to define a child class."""
+
+
+class Person(object):
+    def getGender(self):
+        return "Unknown"
+
+
+class Male(Person):
+    def getGender(self):
+        return "Male"
+
+
+class Female(Person):
+    def getGender(self):
+        return "Female"
+
+
+Male = Male()
+Female = Female()
+print(Male.getGender())
+print(Female.getGender())
