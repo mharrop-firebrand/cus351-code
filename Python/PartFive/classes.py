@@ -23,21 +23,21 @@
 
 
 #! Creating a class
-# Class: Blueprint for each instance
-class Animal:
-    pass
+# # Class: Blueprint for each instance
+# class Animal:
+#     pass
 
 
-animal1 = Animal()
-print(animal1)
+# animal1 = Animal()
+# print(animal1)
 
-# # Instance variables
-animal1.name = "Bean"
-animal1.animal_type = "Dog"
-animal1.age = 1
-print(animal1.name)
-print(animal1.animal_type)
-print(animal1.age)
+# # # Instance variables
+# animal1.name = "Bean"
+# animal1.animal_type = "Dog"
+# animal1.age = 1
+# print(animal1.name)
+# print(animal1.animal_type)
+# print(animal1.age)
 
 
 #! Class atributes
@@ -49,20 +49,20 @@ print(animal1.age)
 # Declared inside the__init__ method
 # Not shared by objects. Every object has its own copy
 # An instance variable can be accessed and modified using the dot notation – instance_name.attribute_name
-class Animal1():
-    # __init__ method  - Constructor
-    # Initialize information about our object when it is created
-    def __init__(self, name, animal_type, age):
-        # Setting the instance variables
-        # animal1.name this the the same as line below
-        self.name = name
-        self.animal_type = animal_type
-        self.age = age
+# class Animal1():
+#     # __init__ method  - Constructor
+#     # Initialize information about our object when it is created
+#     def __init__(self, name, animal_type, age):
+#         # Setting the instance variables
+#         # animal1.name this the the same as line below
+#         self.name = name
+#         self.animal_type = animal_type
+#         self.age = age
 
-# Objects - Instance of our class
-animal1 = Animal1('Bean', 'Dog', 1)
+# # Objects - Instance of our class
+# animal1 = Animal1('Bean', 'Dog', 1)
 
-print(f'{animal1.name} is a {animal1.animal_type} and is {animal1.age} year(s) old')
+# print(f'{animal1.name} is a {animal1.animal_type} and is {animal1.age} year(s) old')
 
 # animal2 = Animal1('Pancake', 'Dog', 4)
 # print(f'{animal2.name} is a {animal2.animal_type} and is {animal2.age} months(s) old')
@@ -189,6 +189,64 @@ print(f'{animal1.name} is a {animal1.animal_type} and is {animal1.age} year(s) o
 # OR
 # It is the capability of one class to derive or inherit the properties of another class
 # Parent class Animal
+# class Animal:
+#     def __init__(self, num_of_legs, domesticated, diet, num_of_teeth, animal_class):
+#         self.num_of_legs = num_of_legs
+#         self.domesticated = domesticated
+#         self.diet = diet
+#         self.num_of_teeth = num_of_teeth
+#         self.animal_class = animal_class
+
+#     def animal_info(self):
+#         return (
+#             f"This animal is part of the {self.animal_class} animal class. \n"
+#             f"It is {self.domesticated} that this animal is domesticated. \n"
+#             f"It uses is {self.num_of_teeth} teeth to eat its {self.diet} diet and walks (or not) on its {self.num_of_legs} number of legs "
+#         )
+
+
+# # Child class: Dog from Animal
+# class Dog(Animal):
+#     def __init__(self, breed, hair_type, size, colour, drools):
+#         self.breed = breed
+#         self.hair_type = hair_type
+#         self.size = size
+#         self.colour = colour
+#         self.drools = drools
+
+#     def dog_info(self):
+#         return (
+#             f"The dog is a {self.breed}.\n"
+#             f"It has {self.hair_type} hair. It is a {self.size} dog. \n"
+#             f"Is it the {self.colour} colour and it is {self.drools} that this animal drools"
+#         )
+
+#     def noise(self):
+#         return "BARK BARK BARK"
+
+
+# animal1 = Animal(
+#     num_of_legs=4,
+#     domesticated=True,
+#     diet="Canivore",
+#     num_of_teeth=42,
+#     animal_class="Mammal",
+# )
+# print(animal1.animal_info())
+
+# dog1 = Dog(
+#     breed="Dachushund",
+#     hair_type="Smooth",
+#     size="Small",
+#     colour="Brown and Tan",
+#     drools=False,
+# )
+# print(dog1.dog_info())
+# print(dog1.noise())
+
+# Child class: Cat from Animal
+
+
 class Animal:
     def __init__(self, num_of_legs, domesticated, diet, num_of_teeth, animal_class):
         self.num_of_legs = num_of_legs
@@ -203,11 +261,22 @@ class Animal:
             f"It is {self.domesticated} that this animal is domesticated. \n"
             f"It uses is {self.num_of_teeth} teeth to eat its {self.diet} diet and walks (or not) on its {self.num_of_legs} number of legs "
         )
+    
+    def noise(self):
+        return 'Generic Animal noise'
 
 
 # Child class: Dog from Animal
 class Dog(Animal):
     def __init__(self, breed, hair_type, size, colour, drools):
+        # Super function returns a temporary object from the parent class
+        super().__init__( # This has to implement all initialzed variables from the parent
+            num_of_legs = 4,
+            domesticated = True,
+            diet ='Carinvore',
+            num_of_teeth = 42,
+            animal_class = 'Mammal'
+        )
         self.breed = breed
         self.hair_type = hair_type
         self.size = size
@@ -215,33 +284,48 @@ class Dog(Animal):
         self.drools = drools
 
     def dog_info(self):
-        return (
+        animal_info = self.animal_info()
+        dog_info = (
             f"The dog is a {self.breed}.\n"
             f"It has {self.hair_type} hair. It is a {self.size} dog. \n"
             f"Is it the {self.colour} colour and it is {self.drools} that this animal drools"
         )
+        return f'{animal_info}\n{dog_info}'
 
     def noise(self):
         return "BARK BARK BARK"
 
+class Cat(Animal):
+    def __init__(self, breed, hair_type, colour, name):
+        super().__init__( # This has to implement all initialzed variables from the parent
+            num_of_legs = 4,
+            domesticated = True,
+            diet ='Carinvore',
+            num_of_teeth = 30,
+            animal_class = 'Mammal'
+        )
+        self.breed = breed
+        self.hair_type = hair_type
+        self.colour = colour
+        self.name = name
 
-animal1 = Animal(
-    num_of_legs=4,
-    domesticated=True,
-    diet="Canivore",
-    num_of_teeth=42,
-    animal_class="Mammal",
+    def cat_info(self):
+        animal_info = self.animal_info()
+        cat_info = (
+            f"The cats name is {self.name}\n"
+            f"{self.name} is a {self.breed}\n"
+            f"{self.name} has {self.hair_type} hair, which is {self.colour} in colour"            
+        )
+        return f'{animal_info}\n{cat_info}'
+
+    def noise(self):
+        return "MEOW MEOW MEOW"
+
+fennic = Cat(
+    breed = "Street Cat",
+    hair_type= "Short",
+    colour = "black",
+    name = "Fennic"
 )
-print(animal1.animal_info())
-
-dog1 = Dog(
-    breed="Dachushund",
-    hair_type="Smooth",
-    size="Small",
-    colour="Brown and Tan",
-    drools=False,
-)
-print(dog1.dog_info())
-print(dog1.noise())
-
-# Child class: Cat from Animal
+print(fennic.cat_info())
+print(fennic.noise())
